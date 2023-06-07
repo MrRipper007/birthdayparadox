@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class BirthdayParadox2 {
     public static void main(String[] args){
         int n = 25; //people in the room
