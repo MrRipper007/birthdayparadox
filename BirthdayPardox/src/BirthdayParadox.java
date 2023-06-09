@@ -2,19 +2,20 @@ import java.util.*;
 
 public class BirthdayParadox {
     public static void main(String[] args) {
-        int[] testSizes = { 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100 };
+        int[] numTest = { 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100 };
+        // Created array to 
 
-        for (int n : testSizes) {
-            int experiments = 10000; // Number of experiments to run
-            int successCount = 0;   // Count of experiments where two people have the same birthday
+        for (int n : numTest) {
+            int simulate = 10000; // Number of simulation to run
+            int successCount = 0;   // Count of simulation where two people have the same birthday
 
-            for (int i = 0; i < experiments; i++) {
+            for (int i = 0; i < simulate; i++) {
                 if (runExperiment(n)) {
                     successCount++;
                 }
             }
 
-            double probability = (double) successCount / experiments;
+            double probability = (double) successCount / simulate;
             System.out.println("For n = " + n + ", probability: " + probability);
         }
     }
